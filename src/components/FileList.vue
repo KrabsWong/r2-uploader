@@ -100,9 +100,11 @@
                   :href="(customDomain ? customDomain : endPoint) + item.key"
                   target="_blank"
                   v-show="!selectMode"
-                  >{{ item.fileName }}</a
+                  >
+                  <img class="w-28 mr-2" :src="(customDomain ? customDomain : endPoint) + item.key" />
+                  {{ item.fileName }}
+                  </a
                 >
-                <img class="w-28 mr-2" :src="(customDomain ? customDomain : endPoint) + item.key" />
                 <label v-show="selectMode" :for="item.key" class="mb-0">{{
                   item.fileName
                 }}</label>
